@@ -1,0 +1,15 @@
+pipeline {
+  agent any
+  stages {
+     stage("ssh") {
+         steps {
+            sh 'ssh -i "ok2.pem" ubuntu@ec2-13-212-176-200.ap-southeast-1.compute.amazonaws.com && df -Th'
+           }
+        }
+     }
+  }
+            
+
+            
+            
+        
